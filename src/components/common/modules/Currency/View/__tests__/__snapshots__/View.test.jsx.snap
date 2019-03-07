@@ -104,7 +104,7 @@ exports[`<Currency.View /> Snapshot tests should render correctly 1`] = `
           className="sc-gZMcBi bEfcsw"
         >
           <svg
-            aria-labelledby="svg-inline--fa-title-nEk2rgxHyv70"
+            aria-labelledby="svg-inline--fa-title-RWqFsWolhI8T"
             className="svg-inline--fa fa-retweet fa-w-20 sc-dnqmqq hLJzAU"
             data-icon="retweet"
             data-prefix="fas"
@@ -115,7 +115,7 @@ exports[`<Currency.View /> Snapshot tests should render correctly 1`] = `
             xmlns="http://www.w3.org/2000/svg"
           >
             <title
-              id="svg-inline--fa-title-nEk2rgxHyv70"
+              id="svg-inline--fa-title-RWqFsWolhI8T"
               style={Object {}}
             >
               Flip currency
