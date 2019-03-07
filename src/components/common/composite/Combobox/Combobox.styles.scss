@@ -1,0 +1,51 @@
+@import "styles/base/settings";
+
+.react-autosuggest__container {
+  position: relative;
+
+  &--open {
+    input {
+      border-bottom-left-radius: 0;
+      border-bottom-right-radius: 0;
+    }
+  }
+}
+
+.react-autosuggest__suggestion {
+  cursor: pointer;
+  font-size: 0.875rem;
+  padding: 0.375rem 0.75rem;
+
+  &--highlighted {
+    background-color: #cbbde2;
+  }
+}
+
+.react-autosuggest__suggestions-container {
+  display: none;
+
+  &--open {
+    background-color: #fff;
+    border: 1px solid #beabda;
+    border-bottom-left-radius: 0.25rem;
+    border-bottom-right-radius: 0.25rem;
+    border-top: none;
+    display: block;
+    max-height: 133px;
+    overflow-x: hidden;
+    overflow-y: scroll;
+    position: absolute;
+    width: 100%;
+    z-index: 3;
+
+    @media (min-width: $breakpoint-sm) {
+      max-height: 199px;
+    }
+  }
+}
+
+.react-autosuggest__suggestions-list {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
