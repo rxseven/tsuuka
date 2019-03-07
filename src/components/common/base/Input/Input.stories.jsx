@@ -28,7 +28,7 @@ storiesOf(title, module)
       markdown: `As this component implements **React.forwardRef**, the story source will not show the correct data source. Furthermore, DevTool will also show a warning message addressing an invalid prop type.`
     }
   })
-  .add('password', () => <Input {...props} type="password" />)
+  .add('type', () => <Input {...props} type="password" />)
   .add('disabled', () => <Input {...props} disabled />)
   .add('with placeholder', () => <Input {...props} placeholder="Text input" />)
   .add('with value', () => <Input {...props} value="username@mail.com" />)
