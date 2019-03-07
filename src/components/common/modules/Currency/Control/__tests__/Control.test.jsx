@@ -1,6 +1,5 @@
 import { shallow } from 'enzyme';
 import React from 'react';
-import renderer from 'react-test-renderer';
 
 import Environment from 'tests/environment';
 import Control from '../index';
@@ -40,16 +39,6 @@ describe('<Currency.Control />', () => {
 
       // Assert
       expect(wrapper).toBeDefined();
-    });
-  });
-
-  describe('Snapshot tests', () => {
-    it('should render correctly', () => {
-      // Act
-      const tree = renderer.create(component).toJSON();
-
-      // Assert
-      expect(tree).toMatchSnapshot();
     });
   });
 });
