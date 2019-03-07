@@ -30,7 +30,7 @@ storiesOf(title, module)
   .add('default', () => (
     <Control {...props} rate={null} targetAmount="" targetCurrency={{}} />
   ))
-  .add('empty base', () => (
+  .add('empty base currency', () => (
     <Control
       {...props}
       baseCurrency={{}}
@@ -43,7 +43,7 @@ storiesOf(title, module)
     <Control {...props} baseAmount={1} isProcessing override rate={null} />
   ))
   .add('success', () => <Control {...props} override />)
-  .add('amount', () => (
+  .add('calculate amount', () => (
     <Control {...props} baseAmount="100" override targetAmount="87.892" />
   ))
   .add('invalid value', () => (
