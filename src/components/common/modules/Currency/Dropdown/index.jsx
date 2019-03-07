@@ -39,7 +39,7 @@ function Dropdown({ data, query }) {
   const matches = match(data.name, query);
   const parts = parse(data.name, matches);
   const currencyCode = data.code.substring(0, 3);
-  const name = (
+  const currencyName = (
     <Name>
       {parts.map(part => {
         return (
@@ -56,7 +56,7 @@ function Dropdown({ data, query }) {
 
   return (
     <Item>
-      {name} <Code>{currencyCode}</Code>
+      {currencyName} <Code>{currencyCode}</Code>
     </Item>
   );
 }
