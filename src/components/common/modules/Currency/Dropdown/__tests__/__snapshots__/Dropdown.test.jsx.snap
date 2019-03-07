@@ -1,0 +1,24 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<Currency.Dropdown /> Snapshot tests should render correctly 1`] = `
+<span
+  className="sc-bwzfXH bMFRZP"
+>
+  <span
+    className="sc-htpNat dbWHLM"
+  >
+    <span
+      className="sc-bxivhb dqunTp"
+      data-highlight={false}
+    >
+      United States Dollar
+    </span>
+  </span>
+   
+  <span
+    className="sc-bdVaJa dzpzzo"
+  >
+    USD
+  </span>
+</span>
+`;

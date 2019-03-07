@@ -1,0 +1,75 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<Currency.Result /> Snapshot tests should render correctly 1`] = `
+Array [
+  <p>
+    <i
+      className="sc-ifAKCX jEgmKQ"
+    >
+      1 
+      USD
+    </i>
+     is worth
+     
+    <i
+      className="sc-ifAKCX jEgmKQ"
+    >
+      31.7916
+       
+      THB
+    </i>
+    . You can spend it
+     
+    only in
+    :
+  </p>,
+  <ul
+    className="sc-htpNat eZEtUy"
+  >
+    <li
+      className="sc-bwzfXH hQcoUX"
+    >
+      <img
+        alt="Thailand"
+        className="sc-bdVaJa gChJQj"
+        src="https://www.countryflags.io/TH/flat/16.png"
+      />
+      <span
+        className="sc-bxivhb hMCZnY"
+      >
+        Thailand
+      </span>
+    </li>
+  </ul>,
+  <div
+    className="sc-EHOje fdDCzn"
+  >
+    Last updated
+     
+    <a
+      href="https://fixer.io"
+      rel="noopener noreferrer"
+      target="_blank"
+      title="Fixer.io"
+    >
+      foreign exchange rates
+    </a>
+     
+    on 
+    <strong>
+      03.03.2019
+    </strong>
+     (free plan,
+     
+    <a
+      href="https://fixer.io/product"
+      rel="noopener noreferrer"
+      target="_blank"
+      title="Fixer's Plans & Pricing"
+    >
+      hourly updates
+    </a>
+    ).
+  </div>,
+]
+`;

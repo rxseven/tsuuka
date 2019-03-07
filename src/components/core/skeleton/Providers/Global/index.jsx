@@ -3,7 +3,10 @@ import PropTypes from 'prop-types';
 import exact from 'prop-types-exact';
 import React from 'react';
 
-const initialState = { isMenu: false };
+const initialState = {
+  currencies: [],
+  isMenu: false
+};
 const Context = React.createContext({});
 
 const propTypes = exact({
@@ -12,6 +15,10 @@ const propTypes = exact({
 
 class Global extends React.Component {
   state = { ...initialState };
+
+  handleCurrencyChange = state => {
+    this.setState(state);
+  };
 
   handleMenuChange = state => {
     this.setState({ isMenu: state.isOpen });
@@ -28,6 +35,9 @@ class Global extends React.Component {
   render() {
     const { children } = this.props;
     const actions = {
+      currency: {
+        onChange: this.handleCurrencyChange
+      },
       menu: {
         onChange: this.handleMenuChange,
         onClose: this.handleMenuClose,
