@@ -38,6 +38,7 @@ const propTypes = exact({
 function Dropdown({ data, query }) {
   const matches = match(data.name, query);
   const parts = parse(data.name, matches);
+  const currencyCode = data.code.substring(0, 3);
   const name = (
     <Name>
       {parts.map(part => {
@@ -55,7 +56,7 @@ function Dropdown({ data, query }) {
 
   return (
     <Item>
-      {name} <Code>{data.code}</Code>
+      {name} <Code>{currencyCode}</Code>
     </Item>
   );
 }
