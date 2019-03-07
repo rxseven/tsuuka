@@ -4,7 +4,7 @@
 
 **Tsūka is an extremely simple React app for converting currencies.** It was built from scratch using only [React](https://reactjs.org) and [PropTypes](https://reactjs.org/docs/typechecking-with-proptypes.html). No complex state menagement, static type checking, and UI library needed!
 
-> Tsūka or 通貨 literally means “Currency” in Japanese and 通貨換算ツール (tsūka kansan tsūru) means “Currency Converter”.
+> Tsūka or 通貨 literally means “Currency” in Japanese and 通貨換算ツール (tsūka kansan tsūru) means “Currency Convertion Tool” or “Currency Converter”.
 
 ## Table of Contents
 
@@ -215,9 +215,7 @@ yarn storybook:static
 
 ## Features
 
-- View images (masonry and lightbox)
-- Upload images
-- Delete images
+Convert currencies using daily Fixer's Forex rates.
 
 [Back to top](#table-of-contents)
 
@@ -234,8 +232,8 @@ Tsūka was built with React and Node.js, one of the most popular stack of techno
 
 ### REST API
 
-- Node, Express, Cloudinary
-- Lodash, CORS, .ENV
+- Node and Express
+- Axios, Lodash, CORS, .ENV, Joi
 
 > Note: REST API for Tsūka can be found in [this repository](https://github.com/rxseven/tsuuka-api).
 
@@ -319,7 +317,7 @@ See [releases](https://github.com/rxseven/tsuuka/releases).
 
 ## Acknowledgements
 
-Tsūka is an open-source project built maintained by [Theerawat Pongsupawat](https://www.linkedin.com/in/pongsupawat/), frontend developer from Chiang Mai, Thailand.
+Tsūka is an open-source project built and maintained by [Theerawat Pongsupawat](https://www.linkedin.com/in/pongsupawat/), frontend developer from Chiang Mai, Thailand.
 
 ## Credits
 
