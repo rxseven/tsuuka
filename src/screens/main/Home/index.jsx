@@ -2,6 +2,7 @@ import React from 'react';
 
 import { Body, Document, Head } from 'components/common/base/Page';
 import Layout from 'components/common/composite/Layout';
+import Currency from 'components/common/modules/Currency';
 
 function Home() {
   return (
@@ -15,7 +16,7 @@ function Home() {
       </Head>
       <Body>
         <Layout>
-          <h2>Home screen</h2>
+          <Currency />
         </Layout>
       </Body>
     </Document>
