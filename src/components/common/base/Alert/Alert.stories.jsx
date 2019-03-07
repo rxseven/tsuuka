@@ -5,7 +5,7 @@ import { storiesOf } from '@storybook/react';
 import Alert from './index';
 
 const title = 'Components/Common/Base/Alert';
-const props = { children: 'Alert message', onDismiss: action('onDismiss') };
+const props = { children: 'Alert message' };
 
 storiesOf(title, module)
   .addParameters({
@@ -16,4 +16,7 @@ storiesOf(title, module)
     }
   })
   .add('danger (default)', () => <Alert {...props} />)
+  .add('with dismiss', () => (
+    <Alert {...props} onDismiss={action('onDismiss')} />
+  ))
   .add('look', () => <Alert {...props} look="success" />);

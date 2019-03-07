@@ -1,3 +1,9 @@
+// Colors
+$primary: #7952b3;
+
+// Links
+$link-color: $primary;
+
 // Typography
 $font-size-base: 0.875rem;
 
@@ -6,3 +12,6 @@ $btn-active-box-shadow: none;
 $input-btn-focus-box-shadow: none;
 $input-btn-focus-color: transparent;
 $input-btn-focus-width: 0;
+
+// Forms
+$form-feedback-icon-invalid: none;

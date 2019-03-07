@@ -23,7 +23,7 @@ export default {
     mac: '#006fff',
     orange: '#fd7e14',
     pink: '#e83e8c',
-    primary: '#007bff',
+    primary: '#7952b3',
     purple: '#6f42c1',
     red: '#dc3545',
     secondary: '#6c757d',

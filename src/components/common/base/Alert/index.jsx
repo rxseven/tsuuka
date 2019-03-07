@@ -6,29 +6,34 @@ import React from 'react';
 const propTypes = exact({
   children: PropTypes.node.isRequired,
   look: PropTypes.string,
-  onDismiss: PropTypes.func.isRequired
+  onDismiss: PropTypes.oneOfType([PropTypes.func, PropTypes.bool])
 });
 
 const defaultProps = {
-  look: 'danger'
+  look: 'danger',
+  onDismiss: false
 };
 
 function Alert({ children, onDismiss, look }) {
   function handleDismiss() {
-    onDismiss(children);
+    if (onDismiss) {
+      onDismiss(children);
+    }
   }
 
   return (
     <div className={cx('alert', `alert-${look}`)}>
       {children}
-      <button
-        aria-label="Close"
-        className="close"
-        onClick={handleDismiss}
-        type="button"
-      >
-        <span aria-hidden="true">&times;</span>
-      </button>
+      <If condition={onDismiss}>
+        <button
+          aria-label="Close"
+          className="close"
+          onClick={handleDismiss}
+          type="button"
+        >
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </If>
     </div>
   );
 }

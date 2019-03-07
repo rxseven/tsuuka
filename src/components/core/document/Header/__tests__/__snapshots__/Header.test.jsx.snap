@@ -2,7 +2,7 @@
 
 exports[`<Header /> Snapshot tests should render correctly 1`] = `
 <header
-  className="sc-ifAKCX gIzvYr"
+  className="sc-ifAKCX gyrbyP"
 >
   <div
     className="container"
@@ -20,7 +20,7 @@ exports[`<Header /> Snapshot tests should render correctly 1`] = `
             className="sc-bZQynM hjqGel"
           >
             <span
-              className="sc-gzVnrw chKlum sc-bwzfXH jQeaWA"
+              className="sc-gzVnrw chKlum sc-bwzfXH cSqLRV"
               onClick={[Function]}
             >
               <svg
@@ -42,7 +42,7 @@ exports[`<Header /> Snapshot tests should render correctly 1`] = `
               </svg>
             </span>
             <a
-              className="sc-bdVaJa jQwNdM"
+              className="sc-bdVaJa gRJttW"
               href="/"
               onClick={[Function]}
               title="Currency Converter"
@@ -60,7 +60,7 @@ exports[`<Header /> Snapshot tests should render correctly 1`] = `
               title="GitHub repo"
             >
               <span
-                className="sc-htpNat kMDAvE"
+                className="sc-htpNat dtAxcs"
               >
                 <svg
                   aria-hidden="true"

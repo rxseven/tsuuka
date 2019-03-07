@@ -2,7 +2,7 @@
 
 exports[`<Burger /> Snapshot tests should render correctly 1`] = `
 <span
-  className="sc-bdVaJa iSubOz"
+  className="sc-bdVaJa Ctdii"
   onClick={[MockFunction]}
 >
   <svg

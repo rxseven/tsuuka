@@ -5,12 +5,12 @@ import Hyperlink from 'components/common/base/Hyperlink';
 import Icon from 'components/common/base/Icon';
 
 const Logo = styled.span`
-  color: ${({ theme }) => theme.color.dark};
+  color: rgba(255, 255, 255, 0.75);
   font-size: 1.35rem;
   transition: color 0.15s ease-in-out;
 
   :hover {
-    color: ${({ theme }) => theme.color.primary};
+    color: rgba(255, 255, 255, 1);
   }
 `;
 

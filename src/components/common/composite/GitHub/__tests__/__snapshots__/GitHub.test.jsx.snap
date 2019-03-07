@@ -8,7 +8,7 @@ exports[`<GitHub /> Snapshot tests should render correctly 1`] = `
   title="GitHub repo"
 >
   <span
-    className="sc-bdVaJa ixLxxl"
+    className="sc-bdVaJa osVux"
   >
     <svg
       aria-hidden="true"

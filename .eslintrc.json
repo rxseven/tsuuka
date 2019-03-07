@@ -39,6 +39,7 @@
     ],
     "jsx-a11y/href-no-hash": "off",
     "jsx-a11y/label-has-for": "off",
+    "jsx-a11y/label-has-associated-control": "off",
     "jsx-control-statements/jsx-choose-not-empty": "warn",
     "jsx-control-statements/jsx-for-require-each": "warn",
     "jsx-control-statements/jsx-for-require-of": "warn",

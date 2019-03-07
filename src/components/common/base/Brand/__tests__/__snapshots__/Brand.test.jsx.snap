@@ -2,7 +2,7 @@
 
 exports[`<Brand /> Snapshot tests should render correctly 1`] = `
 <a
-  className="sc-bdVaJa jQwNdM"
+  className="sc-bdVaJa gRJttW"
   href="/"
   onClick={[Function]}
   title="Currency Converter"
