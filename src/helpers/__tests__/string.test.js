@@ -1,4 +1,22 @@
-import { pluralWord } from '../string';
+import { genKey, pluralWord } from '../string';
+
+describe('genKey helper', () => {
+  it('should return something', () => {
+    // Act
+    const result = genKey();
+
+    // Assert
+    expect(result).not.toBeNull();
+  });
+
+  it('should return random string', () => {
+    // Act
+    const result = genKey();
+
+    // Assert
+    expect(typeof result).toBe('string');
+  });
+});
 
 describe('pluralWord helper', () => {
   it('should return singular word', () => {
