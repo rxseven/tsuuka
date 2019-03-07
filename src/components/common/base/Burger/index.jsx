@@ -9,7 +9,7 @@ const Bars = styled.span`
   align-items: center;
   cursor: pointer;
   border-radius: 50%;
-  color: ${({ theme }) => theme.color.dark};
+  color: rgba(255, 255, 255, 0.75);
   display: flex;
   font-size: 1.1rem;
   font-weight: 300;
@@ -20,7 +20,7 @@ const Bars = styled.span`
 
   :hover {
     background-color: rgba(0, 0, 0, 0.1);
-    color: ${({ theme }) => theme.color.primary};
+    color: rgba(255, 255, 255, 1);
   }
 `;
 
