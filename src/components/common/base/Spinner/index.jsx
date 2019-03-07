@@ -1,14 +1,16 @@
 import PropTypes from 'prop-types';
 import exact from 'prop-types-exact';
 import React from 'react';
-import { ThreeBounce } from 'better-react-spinkit';
+import { FadingCircle, ThreeBounce } from 'better-react-spinkit';
 
 const propTypes = exact({
+  circle: PropTypes.bool,
   color: PropTypes.string,
   size: PropTypes.number
 });
 
 const defaultProps = {
+  circle: false,
   color: '#999',
   size: 7
 };
@@ -18,7 +20,11 @@ const options = {
   gutter: 5
 };
 
-function Spinner(props) {
+function Spinner({ circle, ...props }) {
+  if (circle) {
+    return <FadingCircle />;
+  }
+
   return <ThreeBounce {...options} {...props} />;
 }
 
