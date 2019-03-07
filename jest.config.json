@@ -55,6 +55,7 @@
     "<rootDir>/src/config/",
     "<rootDir>/src/constants/",
     "<rootDir>/src/libraries/",
+    "<rootDir>/src/schemas/",
     "<rootDir>/src/tests/",
     "<rootDir>/src/serviceWorker.js",
     "<rootDir>/src/stories/",
