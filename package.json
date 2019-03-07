@@ -48,6 +48,7 @@
     "@fortawesome/free-regular-svg-icons": "5.7.2",
     "@fortawesome/free-solid-svg-icons": "5.7.2",
     "@fortawesome/react-fontawesome": "0.1.4",
+    "autosuggest-highlight": "3.1.1",
     "axios": "0.18.0",
     "better-react-spinkit": "2.0.4",
     "bootstrap": "4.3.1",
