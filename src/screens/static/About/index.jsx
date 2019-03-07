@@ -28,17 +28,21 @@ function About() {
                 library needed!
               </Card.Text>
               <Card.Text>
-                <strong>Tsūka</strong> is an open-source project built
+                <strong>Tsūka</strong> is an open-source project built and
                 maintained by{' '}
                 <Hyperlink href="https://www.linkedin.com/in/pongsupawat">
                   Theerawat Pongsupawat
                 </Hyperlink>
                 , frontend developer from Chiang Mai, Thailand.
               </Card.Text>
+              <hr />
               <Card.Text>
                 <strong>Tsūka</strong> or 通貨 literally means “Currency” in
-                Japanese and 通貨換算ツール (tsūka kansan tsūru) means “Currency
-                Convertion Tool” or “Currency Converter”.
+                Japanese.
+              </Card.Text>
+              <Card.Text>
+                <strong>Tsūka Kansan Tsūru</strong> or 通貨換算ツール means
+                “Currency Convertion Tool” or “Currency Converter”.
               </Card.Text>
             </Card.Body>
           </Card>
