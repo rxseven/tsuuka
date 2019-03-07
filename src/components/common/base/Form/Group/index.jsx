@@ -1,8 +1,7 @@
+import cx from 'classnames';
 import PropTypes from 'prop-types';
 import exact from 'prop-types-exact';
 import React from 'react';
-
-import Group from './Group';
 
 const propTypes = exact({
   children: PropTypes.node.isRequired,
@@ -13,13 +12,11 @@ const defaultProps = {
   className: ''
 };
 
-function Form({ children, className }) {
-  return <form className={className}>{children}</form>;
+function Group({ children, className }) {
+  return <div className={cx('form-group', className)}>{children}</div>;
 }
 
-Form.propTypes = propTypes;
-Form.defaultProps = defaultProps;
+Group.propTypes = propTypes;
+Group.defaultProps = defaultProps;
 
-Form.Group = Group;
-
-export default Form;
+export default Group;
