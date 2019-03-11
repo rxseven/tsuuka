@@ -36,7 +36,7 @@
 
 > **App sleeping...** as Tsūka and its API run on [Heroku’s free plan](https://www.heroku.com/free), when an app on Heroku has only one web dyno and that dyno doesn’t receive any traffic in 1 hour, the dyno goes to sleep. When someone accesses the app, the dyno manager will automatically wake up the web dyno to run the web process type. **This causes a short delay for this first request**, but subsequent requests will perform normally. For more information, see [App Sleeping on Heroku](https://blog.heroku.com/app_sleeping_on_heroku).
 
-> **Monthly limit** as [Tsūka API](https://github.com/rxseven/tsuuka-api) runs on [Fixer’s free plan](https://fixer.io/product), at which point **Tsūka is restricted to making 1,000 API calls per month**. For more information, see [Fixer Plans](https://fixer.io/product).
+> **Monthly limit** as [Tsūka API](https://github.com/rxseven/tsuuka-api) gets current and historical foreign exchange (Forex) rates from [Fixer’s free plan](https://fixer.io/product), therefore **Tsūka API is restricted to making 1,000 API calls per month**. For more information, see [Fixer Plans](https://fixer.io/product).
 
 [Back to top](#table-of-contents)
 
@@ -174,7 +174,7 @@ yarn build:storybook
 
 ### Analyzing the bundle size
 
-To analyze and debug JavaScript and Sass code bloat through source maps, run the following command to create an optimized production build and start analyzing and debugging the bundle size with [Source Map Explorer](https://github.com/danvk/source-map-explorer):
+To analyze and debug JavaScript and Sass code bloat through source maps, run the following commands respectively to create an optimized production build and start analyzing and debugging the bundle size with [Source Map Explorer](https://github.com/danvk/source-map-explorer):
 
 ```sh
 yarn build
@@ -185,7 +185,7 @@ Once the analyzing process has finished and the report was generated, you will a
 
 ### Running the production build locally
 
-**1.** Run the following commands to create an optimized production build and start an HTTP server serving the static app locally:
+**1.** Run the following commands respectively to create an optimized production build and start an HTTP server serving the static app locally:
 
 ```sh
 yarn build
@@ -200,7 +200,7 @@ yarn start:static
 
 ### Running static Storybook app locally
 
-**1.** Run the following commands to create a static Storybook app and start an HTTP server serving the static app locally:
+**1.** Run the following commands respectively to create a static Storybook app and start an HTTP server serving the static app locally:
 
 ```sh
 yarn build:storybook
@@ -232,8 +232,8 @@ Tsūka was built with React and Node.js, one of the most popular stack of techno
 
 ### REST API
 
-- Node and Express
-- Axios, Lodash, CORS, .ENV, Joi
+- Node, Express, TypeScript
+- CORS, Body-parser, .ENV, Lodash
 
 > Note: REST API for Tsūka can be found in [this repository](https://github.com/rxseven/tsuuka-api).
 
@@ -294,7 +294,7 @@ Chrome and Firefox have full support, but Safari and IE have strange behaviors.
 
 **[Tsūka API](https://github.com/rxseven/tsuuka-api)**
 
-REST API for Tsūka built with Node, Express, and Cloudinary.
+REST API for Tsūka built with Node, Express, and TypeScript.
 
 **[Setup React App](https://github.com/rxseven/setup-react-app)**
 
