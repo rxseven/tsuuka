@@ -16,7 +16,7 @@ export const fetchcurrencies = async (data, successHandler, errorHandler) => {
 // Fetch conversion rate
 export const fetchRate = async (data, successHandler, errorHandler) => {
   try {
-    const response = await axios.get(`${API_URL}/rate`, {
+    const response = await axios.get(`${API_URL}/exchange`, {
       params: data
     });
 
