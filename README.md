@@ -2,7 +2,9 @@
 
 [![Latest Release](https://img.shields.io/badge/latest-0.2.0-lightgrey.svg?style=flat 'Latest Release')](https://github.com/rxseven/tsuuka/releases/tag/v0.2.0) [![Build Status](https://travis-ci.org/rxseven/tsuuka.svg?branch=master 'Build Status')](https://travis-ci.org/rxseven/tsuuka) [![License: CC BY-NC-ND 4.0](https://img.shields.io/badge/License-CC%20BY--NC--ND%204.0-lightgrey.svg)](https://creativecommons.org/licenses/by-nc-nd/4.0/ 'CC BY-NC-ND 4.0') [![License: AGPL v3](https://img.shields.io/badge/License-AGPL%20v3-blue.svg)](https://www.gnu.org/licenses/agpl-3.0 'AGPL v3')
 
-**Tsūka is an extremely simple React app for converting currencies.** It was built from scratch using only [React](https://reactjs.org) and [PropTypes](https://reactjs.org/docs/typechecking-with-proptypes.html). No complex state menagement, static type checking, and UI library needed!
+**Tsūka is an extremely simple React app for converting currencies.** It was built from scratch using only [React](https://reactjs.org) and [PropTypes](https://reactjs.org/docs/typechecking-with-proptypes.html). No complex state management, static type checking, and UI library needed!
+
+**Tsūka** allows you to convert currencies with ease. It uses data from Fixer, the touchstone foreign exchange (Forex) rates compiled from leading market data contributors.
 
 > Tsūka or 通貨 literally means “Currency” in Japanese and 通貨換算ツール (tsūka kansan tsūru) means “Currency Convertion Tool” or “Currency Converter”.
 

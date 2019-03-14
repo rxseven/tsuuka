@@ -24,8 +24,13 @@ function About() {
                 <Hyperlink href="https://reactjs.org/docs/typechecking-with-proptypes.html">
                   PropTypes
                 </Hyperlink>
-                . No complex state menagement, static type checking, and UI
+                . No complex state management, static type checking, and UI
                 library needed!
+              </Card.Text>
+              <Card.Text>
+                <strong>Tsūka</strong> allows you to convert currencies with
+                ease. It uses data from Fixer, the touchstone foreign exchange
+                (Forex) rates compiled from leading market data contributors.
               </Card.Text>
               <Card.Text>
                 <strong>Tsūka</strong> is an open-source project built and
