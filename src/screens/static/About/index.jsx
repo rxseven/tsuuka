@@ -28,6 +28,11 @@ function About() {
                 library needed!
               </Card.Text>
               <Card.Text>
+                <strong>Tsūka</strong> allows you to convert currencies with
+                ease. It uses data from Fixer, the touchstone foreign exchange
+                (Forex) rates compiled from leading market data contributors.
+              </Card.Text>
+              <Card.Text>
                 <strong>Tsūka</strong> is an open-source project built and
                 maintained by{' '}
                 <Hyperlink href="https://www.linkedin.com/in/pongsupawat">
