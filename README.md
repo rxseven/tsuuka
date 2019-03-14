@@ -187,14 +187,23 @@ Once the analyzing process has finished and the report was generated, you will a
 
 ### Running the production build locally
 
-**1.** Run the following commands respectively to create an optimized production build and start an HTTP server serving the static app locally:
+**1.** Change base API URL in `.env.production` as fllows:
+
+```
+# API URLs
+REACT_APP_API_URL=http://localhost:5000/api/v1
+```
+
+> Why do we need to change the base URL? Because all `build` commands will load environment variables from `.env.production` despite the fact that we run this command locally. However, the production [Tsūka API](https://github.com/rxseven/tsuuka-api) only allows incoming requests from two domains (see the configuration [here](https://github.com/rxseven/tsuuka-api/blob/master/src/config/server.ts#L23)), which are [https://tsuuka.herokuapp.com](https://tsuuka.herokuapp.com) and [https://tsuuka.netlify.com](https://tsuuka.netlify.com), other origins will be blocked by [CORS](https://github.com/rxseven/tsuuka-api/blob/master/src/app.ts#L34).
+
+**2.** Run the following commands respectively to create an optimized production build and start an HTTP server serving the static app locally:
 
 ```sh
 yarn build
 yarn start:static
 ```
 
-**2.** Open [http://localhost:8080](http://localhost:8080) to launch the production app in the browser.
+**3.** Open [http://localhost:8080](http://localhost:8080) to launch the production app in the browser.
 
 > Tip: press `control + c` to stop the server.
 
@@ -202,14 +211,21 @@ yarn start:static
 
 ### Running static Storybook app locally
 
-**1.** Run the following commands respectively to create a static Storybook app and start an HTTP server serving the static app locally:
+**1.** Change base API URL in `.env.production` as fllows:
+
+```
+# API URLs
+REACT_APP_API_URL=http://localhost:5000/api/v1
+```
+
+**2.** Run the following commands respectively to create a static Storybook app and start an HTTP server serving the static app locally:
 
 ```sh
 yarn build:storybook
 yarn storybook:static
 ```
 
-**2.** Open [http://localhost:8081](http://localhost:8081) to launch the static Storybook app in the browser.
+**3.** Open [http://localhost:8081](http://localhost:8081) to launch the static Storybook app in the browser.
 
 > Tip: press `control + c` to stop the server.
 
@@ -323,7 +339,7 @@ Tsūka is an open-source project built and maintained by [Theerawat Pongsupawat]
 
 ## Credits
 
-This project was bootstrapped with [Gyararī](https://github.com/rxseven/gyararii).
+This project was bootstrapped with [Gyararī](https://github.com/rxseven/tsuuka).
 
 ## Licenses
 
