@@ -1,7 +1,7 @@
 {
   "name": "tsuuka",
   "description": "An extremely simple React app for converting currencies",
-  "version": "0.3.0",
+  "version": "0.4.0",
   "license": "AGPL-3.0-or-later",
   "author": {
     "name": "Theerawat Pongsupawat",

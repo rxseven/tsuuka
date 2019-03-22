@@ -52,6 +52,24 @@ function About() {
             </Card.Body>
           </Card>
           <Card>
+            <Card.Header>Gyararī API</Card.Header>
+            <Card.Body>
+              <Card.Text>
+                <strong>Tsūka API</strong> is an extremely simple REST API for
+                Tsūka. It was built from scratch using Node, Express, and
+                TypeScript.
+              </Card.Text>
+              <Card.Text>
+                For more information, see this{' '}
+                <Hyperlink href="https://github.com/rxseven/tsuuka-api">
+                  GitHub repository
+                </Hyperlink>
+                .
+              </Card.Text>
+            </Card.Body>
+          </Card>
+
+          <Card>
             <Card.Header>Licenses</Card.Header>
             <Card.Body>
               <Card.Text>
