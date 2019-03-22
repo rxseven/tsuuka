@@ -1,31 +1,40 @@
-import { shallow } from 'enzyme';
 import React from 'react';
-import renderer from 'react-test-renderer';
 
+import { factory, toMarkup } from 'tests/utilities';
 import Form from '../index';
 
+// Arrange
+const seed = { content: 'content' };
+const source = { children: <span>{seed.content}</span> };
+const input = { ...seed, ...source };
+
+// Setup
+function setup(props) {
+  return factory(Form, source, props);
+}
+
+// Test suites
 describe('<Form />', () => {
-  // Arrange
-  const props = { children: <div>Form controls</div> };
-  const component = <Form {...props} />;
-
-  describe('Unit tests', () => {
-    it('should render without crashing', () => {
-      // Act
-      const wrapper = shallow(component);
-
-      // Assert
-      expect(wrapper).toBeDefined();
-    });
+  it('should render without crashing', () => {
+    setup();
   });
 
-  describe('Snapshot tests', () => {
-    it('should render correctly', () => {
-      // Act
-      const tree = renderer.create(component).toJSON();
+  it('should render passed children correctly', () => {
+    const expected = {
+      content: input.content,
+      html: input.children
+    };
+    const { component } = setup();
 
-      // Assert
-      expect(tree).toMatchSnapshot();
-    });
+    expect(component).toHaveTextContent(expected.content);
+    expect(component).toContainHTML(toMarkup(expected.html));
+  });
+
+  it('should render form with custom class names', () => {
+    const props = { className: 'custom-class' };
+    const expected = { class: props.className };
+    const { component } = setup(props);
+
+    expect(component).toHaveClass(expected.class);
   });
 });
