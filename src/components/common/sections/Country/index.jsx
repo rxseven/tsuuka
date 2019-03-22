@@ -44,7 +44,7 @@ function Country({ data }) {
         <Item key={country.code}>
           <Flag
             alt={country.name}
-            src={`${API_URL}/${country.code}/flat/16.png`}
+            src={`${API_URL}/${country.code}/flat/32.png`}
           />
           <Name>{country.name}</Name>
         </Item>
