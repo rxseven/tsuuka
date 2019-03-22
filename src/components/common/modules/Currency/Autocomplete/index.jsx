@@ -41,7 +41,12 @@ const Autocomplete = React.forwardRef(({ onClear, value, ...props }, ref) => {
         type="text"
         value={value}
       />
-      <Clear icon="times-circle" onClick={onClear} visibility={value} />
+      <Clear
+        data-testid="clear"
+        icon="times-circle"
+        onClick={onClear}
+        visibility={value}
+      />
     </Frame>
   );
 });
