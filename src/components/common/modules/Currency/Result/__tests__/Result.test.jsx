@@ -1,31 +1,23 @@
-import { shallow } from 'enzyme';
-import React from 'react';
-
-import Environment from 'tests/environment';
+import { factory } from 'tests/utilities';
 import Result from '../index';
 
+// Arrange
+const source = {
+  baseCurrency: { code: 'USD', name: 'United States Dollar' },
+  countries: [{ code: 'TH', name: 'Thailand' }],
+  rate: '31.7916',
+  targetCurrency: { code: 'THB', name: 'Thai Baht' },
+  timestamp: 1551581826
+};
+
+// Setup
+function setup(props) {
+  return factory(Result, source, props);
+}
+
+// Test suites
 describe('<Currency.Result />', () => {
-  // Arrange
-  const props = {
-    baseCurrency: { code: 'USD', name: 'United States Dollar' },
-    countries: [{ code: 'TH', name: 'Thailand' }],
-    rate: '31.7916',
-    targetCurrency: { code: 'THB', name: 'Thai Baht' },
-    timestamp: 1551581826
-  };
-  const component = (
-    <Environment>
-      <Result {...props} />
-    </Environment>
-  );
-
-  describe('Unit tests', () => {
-    it('should render without crashing', () => {
-      // Act
-      const wrapper = shallow(component);
-
-      // Assert
-      expect(wrapper).toBeDefined();
-    });
+  it('should render without crashing', () => {
+    setup();
   });
 });
