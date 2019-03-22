@@ -21,7 +21,7 @@ const propTypes = {
 };
 
 const defaultProps = {
-  alignment: 'text-left',
+  alignment: 'left',
   background: '',
   className: '',
   color: '',
