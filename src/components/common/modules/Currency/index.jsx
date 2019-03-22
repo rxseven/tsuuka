@@ -87,7 +87,7 @@ class Currency extends React.Component {
     });
 
     // Fetch currencies
-    currencyService.fetchcurrencies(request, successHandler, errorHandler);
+    currencyService.fetchCurrencies(request, successHandler, errorHandler);
   };
 
   // Fetch conversion rate

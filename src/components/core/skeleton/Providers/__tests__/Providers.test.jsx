@@ -1,7 +1,7 @@
 import React from 'react';
 
 import { factory, toMarkup } from 'tests/utilities';
-import Form from '../index';
+import Providers from '../index';
 
 // Arrange
 const seed = { content: 'content' };
@@ -10,11 +10,11 @@ const input = { ...seed, ...source };
 
 // Setup
 function setup(props) {
-  return factory(Form, source, props);
+  return factory(Providers, source, props);
 }
 
 // Test suites
-describe('<Form />', () => {
+describe('<Providers />', () => {
   it('should render without crashing', () => {
     setup();
   });
@@ -28,13 +28,5 @@ describe('<Form />', () => {
 
     expect(component).toHaveTextContent(expected.content);
     expect(component).toContainHTML(toMarkup(expected.html));
-  });
-
-  it('should render form with custom class names', () => {
-    const props = { className: 'custom-class' };
-    const expected = { class: props.className };
-    const { component } = setup(props);
-
-    expect(component).toHaveClass(expected.class);
   });
 });

@@ -1,39 +1,61 @@
-import { shallow } from 'enzyme';
-import React from 'react';
-import renderer from 'react-test-renderer';
+import { fireEvent } from 'react-testing-library';
 
-import Environment from 'tests/environment';
+import { factory } from 'tests/utilities';
 import Autocomplete from '../index';
 
+// Arrange
+const source = {
+  onClear: jest.fn(),
+  onChange: jest.fn(),
+  placeholder: 'Placeholder',
+  value: ''
+};
+const input = { ...source };
+
+// Setup
+function setup(props) {
+  return factory(Autocomplete, source, props);
+}
+
+// Test suites
 describe('<Currency.Autocomplete />', () => {
-  // Arrange
-  const props = {
-    onClear: jest.fn(),
-    value: 'United States Dollar'
-  };
-  const component = (
-    <Environment>
-      <Autocomplete {...props} />
-    </Environment>
-  );
-
-  describe('Unit tests', () => {
-    it('should render without crashing', () => {
-      // Act
-      const wrapper = shallow(component);
-
-      // Assert
-      expect(wrapper).toBeDefined();
-    });
+  it('should render without crashing', () => {
+    setup();
   });
 
-  describe('Snapshot tests', () => {
-    it('should render correctly', () => {
-      // Act
-      const tree = renderer.create(component).toJSON();
+  it('should render "text" input by default', () => {
+    const expected = { type: 'text' };
+    const { getByPlaceholderText } = setup();
 
-      // Assert
-      expect(tree).toMatchSnapshot();
-    });
+    expect(getByPlaceholderText(input.placeholder)).toHaveAttribute(
+      'type',
+      expected.type
+    );
+  });
+
+  it('should not render the "clear" button by default', () => {
+    const { getByTestId } = setup();
+
+    expect(getByTestId('clear')).not.toBeVisible();
+  });
+
+  it('should render input tag with value when passed input value', () => {
+    const props = { value: 'content' };
+    const expected = { value: props.value };
+    const { getByPlaceholderText } = setup(props);
+
+    expect(getByPlaceholderText(input.placeholder)).toHaveAttribute(
+      'value',
+      expected.value
+    );
+  });
+
+  it('should call onClear() when the clear button is clicked', () => {
+    const expected = { called: 1 };
+    const { getByTestId } = setup();
+
+    fireEvent.click(getByTestId('clear'));
+
+    expect(input.onClear).toHaveBeenCalledTimes(expected.called);
   });
 });

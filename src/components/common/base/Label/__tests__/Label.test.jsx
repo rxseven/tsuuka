@@ -1,36 +1,29 @@
-import { shallow } from 'enzyme';
-import React from 'react';
-import renderer from 'react-test-renderer';
-
-import Environment from 'tests/environment';
+import { factory } from 'tests/utilities';
 import Label from '../index';
 
+// Arrange
+const seed = { content: 'content' };
+const source = {
+  children: seed.content,
+  htmlFor: 'email'
+};
+const input = { ...seed, ...source };
+
+// Setup
+function setup(props) {
+  return factory(Label, source, props);
+}
+
+// Test suites
 describe('<Label />', () => {
-  // Arrange
-  const props = { children: 'content', htmlFor: 'username' };
-  const component = (
-    <Environment>
-      <Label {...props} />
-    </Environment>
-  );
-
-  describe('Unit tests', () => {
-    it('should render without crashing', () => {
-      // Act
-      const wrapper = shallow(component);
-
-      // Assert
-      expect(wrapper).toBeDefined();
-    });
+  it('should render without crashing', () => {
+    setup();
   });
 
-  describe('Snapshot tests', () => {
-    it('should render correctly', () => {
-      // Act
-      const tree = renderer.create(component).toJSON();
+  it('should render passed children correctly', () => {
+    const expected = { content: input.content };
+    const { component } = setup();
 
-      // Assert
-      expect(tree).toMatchSnapshot();
-    });
+    expect(component).toHaveTextContent(expected.content);
   });
 });
