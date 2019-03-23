@@ -340,7 +340,7 @@ Tsūka is an open-source project built and maintained by [Theerawat Pongsupawat]
 
 ## Credits
 
-This project was bootstrapped with [Gyararī](https://github.com/rxseven/tsuuka).
+This project was bootstrapped with [Gyararī](https://github.com/rxseven/gyararii).
 
 ## Licenses
 
