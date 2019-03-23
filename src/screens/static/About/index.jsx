@@ -52,7 +52,7 @@ function About() {
             </Card.Body>
           </Card>
           <Card>
-            <Card.Header>Gyararī API</Card.Header>
+            <Card.Header>Tsūka API</Card.Header>
             <Card.Body>
               <Card.Text>
                 <strong>Tsūka API</strong> is an extremely simple REST API for
