@@ -69,7 +69,7 @@ function Result(props) {
         </strong>{' '}
         ({moment.unix(timestamp).fromNow()}) on{' '}
         <strong data-testid="latest-date">
-          {moment.unix(timestamp).format('DD.MM.YYYY')}
+          {moment.unix(timestamp).format('MMMM D, YYYY')}
         </strong>{' '}
         (
         <Hyperlink
