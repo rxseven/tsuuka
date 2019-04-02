@@ -202,25 +202,26 @@ function Control(props) {
       <Grid.Column size="col-md-6">
         <Base>
           <Form.Group>
-            <Label htmlFor="combobox-from" small>
+            <Label htmlFor="base-currency" small>
               Currency I have
             </Label>
             <Combobox
               {...comboboxProps}
-              id="combobox-base"
-              initialValue="United States Dollar"
+              id="base-currency"
+              initialValue={baseCurrency.name}
               onReset={handleResetBase}
               onSelect={handleSelectBase}
               value={baseCurrency.name}
             />
           </Form.Group>
           <Form.Group>
-            <Label htmlFor="input-base" small>
+            <Label htmlFor="base-amount" small>
               I have this much to exchange
             </Label>
             <Input
               {...inputProps}
-              name="input-base"
+              data-testid="base-amount"
+              name="base-amount"
               onChange={handleChangeBase}
               placeholder="Amount"
               ref={baseInputRef}
@@ -250,25 +251,26 @@ function Control(props) {
       <Grid.Column size="col-md-6">
         <Target>
           <Form.Group>
-            <Label htmlFor="combobox-to" small>
+            <Label htmlFor="target-currency" small>
               Currency I want
             </Label>
             <Combobox
               {...comboboxProps}
-              id="combobox-target"
+              id="target-currency"
               onReset={handleResetTarget}
               onSelect={handleSelectTarget}
               value={targetCurrency.name}
             />
           </Form.Group>
           <Form.Group>
-            <Label htmlFor="input-target" small>
+            <Label htmlFor="target-amount" small>
               I want to buy something at this price
             </Label>
             <Input
               {...inputProps}
+              data-testid="target-amount"
               disabled={!rate}
-              name="input-target"
+              name="target-amount"
               onChange={handleChangeTarget}
               placeholder={targetInputlaceholder}
               ref={targetInputRef}
