@@ -61,7 +61,7 @@ function Result(props) {
       <Meta>
         Last updated{' '}
         <Hyperlink href="https://fixer.io" title="Fixer.io">
-          foreign exchange rates
+          Forex rates
         </Hyperlink>{' '}
         at{' '}
         <strong data-testid="latest-time">
