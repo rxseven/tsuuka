@@ -31,25 +31,28 @@ const propTypes = {
   value: PropTypes.string.isRequired
 };
 
-const Autocomplete = React.forwardRef(({ onClear, value, ...props }, ref) => {
-  return (
-    <Frame>
-      <input
-        {...props}
-        className="form-control"
-        ref={ref}
-        type="text"
-        value={value}
-      />
-      <Clear
-        data-testid="clear"
-        icon="times-circle"
-        onClick={onClear}
-        visibility={value}
-      />
-    </Frame>
-  );
-});
+const Autocomplete = React.forwardRef(
+  ({ id, onClear, value, ...props }, ref) => {
+    return (
+      <Frame>
+        <input
+          {...props}
+          className="form-control"
+          data-testid={id}
+          ref={ref}
+          type="text"
+          value={value}
+        />
+        <Clear
+          data-testid="clear"
+          icon="times-circle"
+          onClick={onClear}
+          visibility={value}
+        />
+      </Frame>
+    );
+  }
+);
 
 Autocomplete.propTypes = propTypes;
 
