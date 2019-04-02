@@ -177,4 +177,5 @@ class Combobox extends React.Component {
 Combobox.propTypes = propTypes;
 Combobox.defaultProps = defaultProps;
 
+export { filterList, getSuggestions };
 export default Combobox;
