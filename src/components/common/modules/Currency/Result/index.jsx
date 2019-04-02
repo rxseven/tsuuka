@@ -67,7 +67,7 @@ function Result(props) {
         <strong data-testid="latest-date">
           {moment.unix(timestamp).format('HH:mm:ss')}
         </strong>{' '}
-        on{' '}
+        ({moment.unix(timestamp).fromNow()}) on{' '}
         <strong data-testid="latest-time">
           {moment.unix(timestamp).format('DD.MM.YYYY')}
         </strong>{' '}
