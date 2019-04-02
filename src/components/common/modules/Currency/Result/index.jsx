@@ -71,7 +71,7 @@ function Result(props) {
         <strong data-testid="latest-time">
           {moment.unix(timestamp).format('DD.MM.YYYY')}
         </strong>{' '}
-        (free plan,{' '}
+        (
         <Hyperlink
           href="https://fixer.io/product"
           title="Fixer's Plans & Pricing"
