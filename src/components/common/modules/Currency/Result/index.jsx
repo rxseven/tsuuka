@@ -44,7 +44,7 @@ function Result(props) {
   const countriesLength = countries.length;
 
   return (
-    <React.Fragment>
+    <div data-testid="result">
       <p>
         <Highlight>1 {baseCurrency.code}</Highlight> is worth{' '}
         <Highlight>
@@ -61,11 +61,17 @@ function Result(props) {
       <Meta>
         Last updated{' '}
         <Hyperlink href="https://fixer.io" title="Fixer.io">
-          foreign exchange rates
+          Forex rates
         </Hyperlink>{' '}
-        at <strong>{moment.unix(timestamp).format('HH:mm:ss')}</strong> on{' '}
-        <strong>{moment.unix(timestamp).format('DD.MM.YYYY')}</strong> (free
-        plan,{' '}
+        at{' '}
+        <strong data-testid="latest-time">
+          {moment.unix(timestamp).format('HH:mm:ss')}
+        </strong>{' '}
+        ({moment.unix(timestamp).fromNow()}) on{' '}
+        <strong data-testid="latest-date">
+          {moment.unix(timestamp).format('MMMM D, YYYY')}
+        </strong>{' '}
+        (
         <Hyperlink
           href="https://fixer.io/product"
           title="Fixer's Plans & Pricing"
@@ -74,7 +80,7 @@ function Result(props) {
         </Hyperlink>
         ).
       </Meta>
-    </React.Fragment>
+    </div>
   );
 }
 
