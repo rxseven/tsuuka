@@ -63,9 +63,15 @@ function Result(props) {
         <Hyperlink href="https://fixer.io" title="Fixer.io">
           foreign exchange rates
         </Hyperlink>{' '}
-        at <strong>{moment.unix(timestamp).format('HH:mm:ss')}</strong> on{' '}
-        <strong>{moment.unix(timestamp).format('DD.MM.YYYY')}</strong> (free
-        plan,{' '}
+        at{' '}
+        <strong data-testid="latest-date">
+          {moment.unix(timestamp).format('HH:mm:ss')}
+        </strong>{' '}
+        on{' '}
+        <strong data-testid="latest-time">
+          {moment.unix(timestamp).format('DD.MM.YYYY')}
+        </strong>{' '}
+        (free plan,{' '}
         <Hyperlink
           href="https://fixer.io/product"
           title="Fixer's Plans & Pricing"
