@@ -64,11 +64,11 @@ function Result(props) {
           foreign exchange rates
         </Hyperlink>{' '}
         at{' '}
-        <strong data-testid="latest-date">
+        <strong data-testid="latest-time">
           {moment.unix(timestamp).format('HH:mm:ss')}
         </strong>{' '}
         ({moment.unix(timestamp).fromNow()}) on{' '}
-        <strong data-testid="latest-time">
+        <strong data-testid="latest-date">
           {moment.unix(timestamp).format('DD.MM.YYYY')}
         </strong>{' '}
         (

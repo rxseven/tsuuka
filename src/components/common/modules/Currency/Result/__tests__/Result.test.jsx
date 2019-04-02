@@ -60,8 +60,8 @@ describe('<Currency.Result />', () => {
 
   it('should render last updated date and time', () => {
     const expected = {
-      date: moment.unix(source.timestamp).format('HH:mm:ss'),
-      time: moment.unix(source.timestamp).format('DD.MM.YYYY')
+      date: moment.unix(source.timestamp).format('DD.MM.YYYY'),
+      time: moment.unix(source.timestamp).format('HH:mm:ss')
     };
     const { getByTestId } = setup();
 
