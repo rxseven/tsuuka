@@ -44,7 +44,7 @@ function Result(props) {
   const countriesLength = countries.length;
 
   return (
-    <React.Fragment>
+    <div data-testid="result">
       <p>
         <Highlight>1 {baseCurrency.code}</Highlight> is worth{' '}
         <Highlight>
@@ -80,7 +80,7 @@ function Result(props) {
         </Hyperlink>
         ).
       </Meta>
-    </React.Fragment>
+    </div>
   );
 }
 

@@ -198,88 +198,90 @@ function Control(props) {
   }
 
   return (
-    <Grid.Row>
-      <Grid.Column size="col-md-6">
-        <Base>
-          <Form.Group>
-            <Label htmlFor="base-currency" small>
-              Currency I have
-            </Label>
-            <Combobox
-              {...comboboxProps}
-              id="base-currency"
-              initialValue={baseCurrency.name}
-              onReset={handleResetBase}
-              onSelect={handleSelectBase}
-              value={baseCurrency.name}
-            />
-          </Form.Group>
-          <Form.Group>
-            <Label htmlFor="base-amount" small>
-              I have this much to exchange
-            </Label>
-            <Input
-              {...inputProps}
-              data-testid="base-amount"
-              name="base-amount"
-              onChange={handleChangeBase}
-              placeholder="Amount"
-              ref={baseInputRef}
-              value={baseAmount}
-            />
-          </Form.Group>
-        </Base>
-      </Grid.Column>
-      <Exchange>
-        <Toolbar>
-          <Choose>
-            <When condition={isProcessing}>
-              <Spinner circle />
-            </When>
-            <Otherwise>
-              <If condition={isReady}>
-                <Flipper
-                  icon="retweet"
-                  onClick={onExchange}
-                  title="Flip currency"
-                />
-              </If>
-            </Otherwise>
-          </Choose>
-        </Toolbar>
-      </Exchange>
-      <Grid.Column size="col-md-6">
-        <Target>
-          <Form.Group>
-            <Label htmlFor="target-currency" small>
-              Currency I want
-            </Label>
-            <Combobox
-              {...comboboxProps}
-              id="target-currency"
-              onReset={handleResetTarget}
-              onSelect={handleSelectTarget}
-              value={targetCurrency.name}
-            />
-          </Form.Group>
-          <Form.Group>
-            <Label htmlFor="target-amount" small>
-              I want to buy something at this price
-            </Label>
-            <Input
-              {...inputProps}
-              data-testid="target-amount"
-              disabled={!rate}
-              name="target-amount"
-              onChange={handleChangeTarget}
-              placeholder={targetInputPlaceholder}
-              ref={targetInputRef}
-              value={rate ? targetAmount : ''}
-            />
-          </Form.Group>
-        </Target>
-      </Grid.Column>
-    </Grid.Row>
+    <div data-testid="control">
+      <Grid.Row>
+        <Grid.Column size="col-md-6">
+          <Base>
+            <Form.Group>
+              <Label htmlFor="base-currency" small>
+                Currency I have
+              </Label>
+              <Combobox
+                {...comboboxProps}
+                id="base-currency"
+                initialValue={baseCurrency.name}
+                onReset={handleResetBase}
+                onSelect={handleSelectBase}
+                value={baseCurrency.name}
+              />
+            </Form.Group>
+            <Form.Group>
+              <Label htmlFor="base-amount" small>
+                I have this much to exchange
+              </Label>
+              <Input
+                {...inputProps}
+                data-testid="base-amount"
+                name="base-amount"
+                onChange={handleChangeBase}
+                placeholder="Amount"
+                ref={baseInputRef}
+                value={baseAmount}
+              />
+            </Form.Group>
+          </Base>
+        </Grid.Column>
+        <Exchange>
+          <Toolbar>
+            <Choose>
+              <When condition={isProcessing}>
+                <Spinner circle />
+              </When>
+              <Otherwise>
+                <If condition={isReady}>
+                  <Flipper
+                    icon="retweet"
+                    onClick={onExchange}
+                    title="Flip currency"
+                  />
+                </If>
+              </Otherwise>
+            </Choose>
+          </Toolbar>
+        </Exchange>
+        <Grid.Column size="col-md-6">
+          <Target>
+            <Form.Group>
+              <Label htmlFor="target-currency" small>
+                Currency I want
+              </Label>
+              <Combobox
+                {...comboboxProps}
+                id="target-currency"
+                onReset={handleResetTarget}
+                onSelect={handleSelectTarget}
+                value={targetCurrency.name}
+              />
+            </Form.Group>
+            <Form.Group>
+              <Label htmlFor="target-amount" small>
+                I want to buy something at this price
+              </Label>
+              <Input
+                {...inputProps}
+                data-testid="target-amount"
+                disabled={!rate}
+                name="target-amount"
+                onChange={handleChangeTarget}
+                placeholder={targetInputPlaceholder}
+                ref={targetInputRef}
+                value={rate ? targetAmount : ''}
+              />
+            </Form.Group>
+          </Target>
+        </Grid.Column>
+      </Grid.Row>
+    </div>
   );
 }
 
