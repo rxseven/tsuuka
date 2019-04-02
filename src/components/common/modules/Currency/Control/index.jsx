@@ -160,17 +160,17 @@ function Control(props) {
     }
   };
 
-  let targetInputlaceholder;
+  let targetInputPlaceholder;
 
   switch (true) {
     case !isEmpty(targetCurrency) && !isProcessing:
-      targetInputlaceholder = 'Amount';
+      targetInputPlaceholder = 'Amount';
       break;
     case isProcessing:
-      targetInputlaceholder = 'Processing...';
+      targetInputPlaceholder = 'Processing...';
       break;
     default:
-      targetInputlaceholder = 'Please choose the currency above';
+      targetInputPlaceholder = 'Please choose the currency above';
   }
 
   function handleChangeBase(event) {
@@ -272,7 +272,7 @@ function Control(props) {
               disabled={!rate}
               name="target-amount"
               onChange={handleChangeTarget}
-              placeholder={targetInputlaceholder}
+              placeholder={targetInputPlaceholder}
               ref={targetInputRef}
               value={rate ? targetAmount : ''}
             />
