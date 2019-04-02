@@ -282,4 +282,5 @@ class Currency extends React.Component {
   }
 }
 
+export { Currency };
 export default withContext(Currency);
