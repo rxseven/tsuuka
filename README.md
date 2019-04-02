@@ -53,14 +53,14 @@ Before getting started, you are required to have or install the following tools 
 - [nvm](https://github.com/creationix/nvm/releases/tag/v0.33.5) _(v0.33.5\*)_ and [Node.js](https://nodejs.org/en/blog/release/v10.15.1/) _(v10.15.1\*)_
 - [npm](https://github.com/npm/cli/releases/tag/v6.4.1) _(v6.4.1\*)_ or [Yarn](https://github.com/yarnpkg/yarn/releases/tag/v1.3.2) _(v1.3.2\*)_
 
+> Note: if you are using Mac running [macOS](https://en.wikipedia.org/wiki/MacOS) _(v10.12 Sierra\*)_, you are set with Git and GNU Bash.
+
 Optional, but nice to have:
 
 - [Visual Studio Code](https://code.visualstudio.com)\*\*
 - [Google Chrome](https://www.google.com/chrome/)\*\*
 
-> Note: if you are using Mac running [macOS](https://en.wikipedia.org/wiki/MacOS) _(v10.12 Sierra\*)_, you are set with Git and GNU Bash.
-
-> Note: this project has been pre-configured for use with Visual Studio Code.
+While it is not a requirement, I recommend using Visual Studio Code as your editor so you can take advantage of all the awesome features Visual Studio Code extensions enable.
 
 ### Setup
 
@@ -326,6 +326,8 @@ React & Redux starter kit with best practices bootstrapped with [Create React Ap
 - Implement animations
 - Optimize the app’s performance
 - Add more unit, integration, and E2E tests to cover the entire app
+- Upgrade Storybook to v5
+- Upgrade React Router to v5
 - More...
 
 [Back to top](#table-of-contents)
